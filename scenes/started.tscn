@@ -1,0 +1,155 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsdnkmj8j5pty"]
+
+[ext_resource type="Script" path="res://scripts/started.gd" id="1_j11da"]
+[ext_resource type="Texture2D" uid="uid://bj7nn0i6cm7g7" path="res://background.jpg" id="2_1f2e3"]
+[ext_resource type="Script" path="res://scripts/chatgpt.gd" id="2_eg4qs"]
+[ext_resource type="Texture2D" uid="uid://bd1bub3lqd8xc" path="res://reload.png" id="3_hafnq"]
+[ext_resource type="Texture2D" uid="uid://bb3o3vp5417kn" path="res://home.png" id="5_yp3wk"]
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_kvbfi"]
+
+[sub_resource type="FontFile" id="FontFile_jj0l0"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+
+[node name="started" type="Node2D"]
+script = ExtResource("1_j11da")
+
+[node name="AI Thingy" type="Node" parent="."]
+script = ExtResource("2_eg4qs")
+
+[node name="aiprompt" type="TextEdit" parent="AI Thingy"]
+offset_left = -362.0
+offset_top = -134.0
+offset_right = 364.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "What do you want to ask?"
+wrap_mode = 1
+
+[node name="aians" type="TextEdit" parent="AI Thingy"]
+visible = false
+offset_left = -362.0
+offset_top = -134.0
+offset_right = 364.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Loading...."
+editable = false
+wrap_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.196384, 0.169875)
+texture = ExtResource("2_1f2e3")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(-575, -4.05312e-06)
+scale = Vector2(8.75, 648)
+mesh = SubResource("RibbonTrailMesh_kvbfi")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(-0.755247, 326)
+rotation = 1.5708
+scale = Vector2(8.75, 1157.61)
+mesh = SubResource("RibbonTrailMesh_kvbfi")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(-0.755247, -322)
+rotation = 1.5708
+scale = Vector2(8.75, 1157.61)
+mesh = SubResource("RibbonTrailMesh_kvbfi")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(1.19209e-07, -160)
+rotation = 1.5708
+scale = Vector2(8.75, 1157.61)
+mesh = SubResource("RibbonTrailMesh_kvbfi")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(574, 9.53674e-07)
+scale = Vector2(8.75, 648)
+mesh = SubResource("RibbonTrailMesh_kvbfi")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = -300.0
+offset_top = 137.0
+offset_right = 304.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 100
+text = "Enter"
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+anchors_preset = -1
+anchor_left = -0.169271
+anchor_top = -0.905864
+anchor_right = -0.169271
+anchor_bottom = -0.905864
+offset_left = -426.0
+offset_top = 170.0
+offset_right = 805.0
+offset_bottom = 559.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_jj0l0")
+theme_override_font_sizes/font_size = 80
+text = "Get Started!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="reload" type="Button" parent="."]
+offset_left = 516.0
+offset_top = 268.0
+offset_right = 567.0
+offset_bottom = 319.0
+icon = ExtResource("3_hafnq")
+expand_icon = true
+
+[node name="Meshes" type="Node" parent="."]
+
+[node name="home" type="Button" parent="."]
+offset_left = 461.0
+offset_top = -313.0
+offset_right = 567.0
+offset_bottom = -207.0
+icon = ExtResource("5_yp3wk")
+flat = true
+expand_icon = true
+
+[connection signal="text_set" from="AI Thingy/aiprompt" to="AI Thingy" method="_on_aiprompt_text_set"]
+[connection signal="text_set" from="AI Thingy/aians" to="AI Thingy" method="_on_aiprompt_text_set"]
+[connection signal="hidden" from="Button2" to="." method="_on_button_2_hidden"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="AI Thingy" method="_on_button_2_pressed"]
+[connection signal="visibility_changed" from="Button2" to="." method="_on_button_2_visibility_changed"]
+[connection signal="pressed" from="reload" to="." method="_on_reload_pressed"]
+[connection signal="pressed" from="reload" to="AI Thingy" method="_on_reload_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

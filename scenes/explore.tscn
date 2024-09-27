@@ -1,0 +1,347 @@
+[gd_scene load_steps=6 format=3 uid="uid://cx7ic56tyal2q"]
+
+[ext_resource type="Script" path="res://scripts/explore.gd" id="1_71ch2"]
+[ext_resource type="Texture2D" uid="uid://bj7nn0i6cm7g7" path="res://background.jpg" id="1_no3r2"]
+[ext_resource type="Texture2D" uid="uid://bb3o3vp5417kn" path="res://home.png" id="3_acht0"]
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_htjef"]
+
+[sub_resource type="FontFile" id="FontFile_xmgqf"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+
+[node name="explore" type="Node2D"]
+script = ExtResource("1_71ch2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Meshes" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Meshes"]
+position = Vector2(-1, -1)
+scale = Vector2(0.196384, 0.169875)
+texture = ExtResource("1_no3r2")
+
+[node name="dog" type="Button" parent="Meshes"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.00154321
+offset_left = -529.0
+offset_top = 58.0
+offset_right = -55.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 125
+action_mode = 0
+text = "Dog"
+metadata/_edit_use_anchors_ = true
+
+[node name="cat" type="Button" parent="Meshes"]
+visible = false
+offset_left = -536.0
+offset_top = 59.0
+offset_right = -48.0
+offset_bottom = 267.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 125
+action_mode = 0
+text = "Cat"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Meshes"]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(-575, -4.05312e-06)
+scale = Vector2(8.75, 648)
+mesh = SubResource("RibbonTrailMesh_htjef")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Meshes"]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(-0.755247, 326)
+rotation = 1.5708
+scale = Vector2(8.75, 1157.61)
+mesh = SubResource("RibbonTrailMesh_htjef")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="Meshes"]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(-0.755247, -322)
+rotation = 1.5708
+scale = Vector2(8.75, 1157.61)
+mesh = SubResource("RibbonTrailMesh_htjef")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Meshes"]
+modulate = Color(0.278431, 0.278431, 0.278431, 1)
+position = Vector2(574, 9.53674e-07)
+scale = Vector2(8.75, 648)
+mesh = SubResource("RibbonTrailMesh_htjef")
+
+[node name="Label5" type="Label" parent="Meshes"]
+visible = false
+top_level = true
+anchors_preset = -1
+anchor_left = -0.590278
+anchor_right = -0.344618
+offset_left = -111.0
+offset_top = -186.0
+offset_right = 1199.0
+offset_bottom = -113.0
+theme_override_colors/font_color = Color(0.278431, 0.278431, 0.278431, 1)
+theme_override_font_sizes/font_size = 25
+text = "This App helps with first time pet owners with caring for their pet! 
+It uses data from ai to tell you what to do, and what not to do
+
+If you own one of these pets, please pick them"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Meshes"]
+top_level = true
+anchors_preset = -1
+anchor_left = -0.169271
+anchor_top = -0.430556
+anchor_right = -0.169271
+anchor_bottom = -0.430556
+offset_left = -302.0
+offset_top = -159.0
+offset_right = 698.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_xmgqf")
+theme_override_font_sizes/font_size = 80
+text = "Explore"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Cat" type="Label" parent="Meshes"]
+visible = false
+offset_left = -471.0
+offset_top = 483.0
+offset_right = 548.0
+offset_bottom = 1072.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Setting
+To manage the first few months with your new kitten, start by preparing a quiet room with designated spots for food, water, and a litter tray. Let your kitten explore and acclimate at their own pace. Engage in play with appropriate toys and set boundaries early on. Kitten-proof your home by removing hazards to ensure a safe environment.
+
+Important activities
+Schedule important healthcare steps like vaccinations, neutering, and microchipping. When your kitten is around 5-6 months old, you can begin to introduce them to the outdoors, ensuring they're well-prepared and safe.
+
+Food
+For food options, kittens can eat both wet and dry foods, but make sure they have more calcium and healthy nutrients in them. This food should meets WSAVA standards."
+autowrap_mode = 3
+
+[node name="Dog" type="Label" parent="Meshes"]
+visible = false
+offset_left = -445.0
+offset_top = -207.0
+offset_right = 448.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "To manage the first few months with your new puppy, start by preparing a safe and comfortable space for them. Gradually introduce them to their new environment and establish a routine for feeding, playtime, and potty training. Use positive reinforcement to encourage good behavior and be consistent with commands and boundaries. Ensure your home is puppy-proofed to avoid accidents and hazards. Schedule essential vet visits for vaccinations, deworming, and microchipping. Socialize your puppy with other dogs and people to help them develop good manners and confidence. For food, puppies can eat both wet and dry foods. The food they eat should contain high quality proteins and fats. It should also have DHA (an omega-3 fatty acid), antitoxidants and minerals. Consult your veterinarian on when and how much to feed your puppy.
+
+
+
+
+
+
+
+"
+autowrap_mode = 2
+
+[node name="oldDog" type="Label" parent="Meshes"]
+visible = false
+offset_left = -447.0
+offset_top = -208.0
+offset_right = 446.0
+offset_bottom = 701.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Caring for an older dog involves some additional considerations compared to a younger one. Ensure they have a comfortable, easily accessible resting area and consider providing orthopedic bedding for joint support. Be mindful of their diet, as older dogs may need food formulated for senior dogs to support their changing nutritional needs. Maintain a regular exercise routine but adjust the intensity to match their capabilities. Regular vet check-ups are crucial to monitor for age-related health issues. Additionally, pay attention to dental care and watch for signs of discomfort or pain, as older dogs may develop arthritis or other conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+autowrap_mode = 2
+
+[node name="oldCat" type="Label" parent="Meshes"]
+visible = false
+offset_left = -447.0
+offset_top = -208.0
+offset_right = 446.0
+offset_bottom = 701.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Caring for an older cat involves some special considerations. Create a cozy, accessible resting area, and provide soft bedding to support aging joints. Adjust their diet to senior cat food, which caters to their changing nutritional needs. Keep a regular but gentle exercise routine to maintain their mobility. Schedule frequent vet check-ups to monitor for age-related health issues and maintain dental care. Pay attention to changes in behavior or signs of discomfort, as older cats are prone to arthritis and other health conditions. For an older cat, you should use
+
+
+
+
+
+
+
+
+
+
+
+
+"
+autowrap_mode = 2
+
+[node name="dog button" type="Button" parent="Meshes"]
+offset_left = -379.0
+offset_top = 176.0
+offset_right = 404.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 60
+text = "I have an older dog"
+
+[node name="youngdogbutton" type="Button" parent="Meshes"]
+offset_left = -379.0
+offset_top = 176.0
+offset_right = 404.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 60
+text = "I have an younger dog"
+
+[node name="cat button" type="Button" parent="Meshes"]
+visible = false
+offset_left = -379.0
+offset_top = 170.0
+offset_right = 404.0
+offset_bottom = 268.0
+theme_override_font_sizes/font_size = 60
+text = "I have an older cat"
+
+[node name="youngcatbutton" type="Button" parent="Meshes"]
+visible = false
+offset_left = -379.0
+offset_top = 170.0
+offset_right = 404.0
+offset_bottom = 268.0
+theme_override_font_sizes/font_size = 60
+text = "I have an younger cat"
+
+[node name="home" type="Button" parent="Meshes"]
+offset_left = 458.0
+offset_top = -314.0
+offset_right = 568.0
+offset_bottom = -204.0
+icon = ExtResource("3_acht0")
+expand_icon = true
+
+[node name="Cat2" type="TextEdit" parent="Meshes"]
+visible = false
+offset_left = -377.0
+offset_top = -196.0
+offset_right = 395.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 25
+text = "Setting
+To manage the first few months with your new kitten, start by preparing a quiet room with designated spots for food, water, and a litter tray. Let your kitten explore and acclimate at their own pace. Engage in play with appropriate toys and set boundaries early on. Kitten-proof your home by removing hazards to ensure a safe environment.
+
+Important activities
+Schedule important healthcare steps like vaccinations, neutering, and microchipping. When your kitten is around 5-6 months old, you can begin to introduce them to the outdoors, ensuring they're well-prepared and safe.
+
+Food
+For food options, kittens can eat both wet and dry foods, but make sure they have more calcium and healthy nutrients in them. This food should meets WSAVA standards."
+editable = false
+wrap_mode = 1
+
+[node name="Dog2" type="TextEdit" parent="Meshes"]
+visible = false
+offset_left = -377.0
+offset_top = -196.0
+offset_right = 395.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 25
+text = "Setting and Routine
+To manage the first few months with your new puppy, start by preparing a safe and comfortable space for them. Gradually introduce them to their new environment and establish a routine for feeding, playtime, and potty training. 
+
+Training
+Use positive reinforcement to encourage good behavior and be consistent with commands and boundaries. Ensure your home is puppy-proofed to avoid accidents and hazards.
+
+Important Activities
+Schedule essential vet visits for vaccinations, deworming, and microchipping. Socialize your puppy with other dogs and people to help them develop good manners and confidence. 
+
+Food
+For food, puppies can eat both wet and dry foods. The food they eat should contain high quality proteins and fats. It should also have DHA (an omega-3 fatty acid), antitoxidants and minerals. Consult your veterinarian on when and how much to feed your puppy."
+editable = false
+wrap_mode = 1
+
+[node name="oldCat2" type="TextEdit" parent="Meshes"]
+visible = false
+offset_left = -377.0
+offset_top = -196.0
+offset_right = 395.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 25
+text = "Caring for an adult cat involves providing balanced nutrition, regular health check-ups, and an enriching environment. 
+
+Food
+Feed your cat high-quality commercial cat food that meets their specific nutritional needs, ensuring a mix of wet and dry food to support hydration and dental health. Portion control is essential to prevent obesity, so feed your cat according to their weight and activity level. Always have fresh water available for your cat.
+
+Routine and Setting
+Routine veterinary visits are crucial for vaccinations, dental check-ups, and overall health monitoring. Keeping the litter box clean is vital for hygiene and to encourage regular use. Provide plenty of toys, scratching posts, and opportunities for play to keep your cat mentally and physically stimulated. Ensure they have a safe, comfortable space to rest and show them affection regularly to promote a strong bond and overall well-being​."
+editable = false
+wrap_mode = 1
+
+[node name="oldDog2" type="TextEdit" parent="Meshes"]
+visible = false
+offset_left = -377.0
+offset_top = -196.0
+offset_right = 395.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 25
+text = "Taking care of an adult dog involves providing balanced nutrition, regular exercise, and routine veterinary care.
+
+Food
+Feed your dog high-quality commercial dog food appropriate for their size, breed, and age, ensuring it meets all their nutritional requirements. Meals should be given at consistent times each day, with portion sizes controlled to prevent obesity. Fresh water should always be available.
+
+Exercise
+Regular exercise is crucial for maintaining your dog's physical and mental health. Depending on their breed and energy level, this can include daily walks, play sessions, and activities that stimulate their mind, such as training exercises and puzzle toys​
+
+Setting and Routine
+Routine veterinary visits are essential for vaccinations, dental care, and health check-ups to monitor for any potential issues. Keep your dog's living environment clean and safe, provide them with a comfortable place to rest, and ensure they receive plenty of love and attention. Grooming needs vary by breed, but regular brushing, nail trimming, and bathing are important aspects of maintaining your dog's overall health and well-being​."
+editable = false
+wrap_mode = 1
+
+[connection signal="pressed" from="Meshes/dog" to="." method="_on_dog_pressed"]
+[connection signal="pressed" from="Meshes/dog" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Meshes/dog" to="." method="_on_dog_toggled"]
+[connection signal="pressed" from="Meshes/cat" to="." method="_on_started_pressed"]
+[connection signal="pressed" from="Meshes/cat" to="." method="_on_cat_pressed"]
+[connection signal="pressed" from="Meshes/dog button" to="." method="_on_dog_button_pressed"]
+[connection signal="pressed" from="Meshes/youngdogbutton" to="." method="_on_youngdogbutton_pressed"]
+[connection signal="pressed" from="Meshes/youngdogbutton" to="." method="_on_dog_button_pressed"]
+[connection signal="pressed" from="Meshes/cat button" to="." method="_on_cat_button_pressed"]
+[connection signal="pressed" from="Meshes/youngcatbutton" to="." method="_on_youngcatbutton_pressed"]
+[connection signal="pressed" from="Meshes/home" to="." method="_on_home_pressed"]
