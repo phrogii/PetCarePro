@@ -1,0 +1,102 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvqvlmp4nlxoy"]
+
+[ext_resource type="Script" path="res://app/startup.gd" id="1_f07di"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_menx7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_6tkba"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_dyuq5"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_whmry"]
+
+[node name="forums" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f07di")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Forums"
+horizontal_alignment = 1
+
+[node name="createNew" type="Button" parent="."]
+layout_mode = 2
+offset_left = 393.0
+offset_top = 203.0
+offset_right = 761.0
+offset_bottom = 284.0
+scale = Vector2(1.02372, 0.914871)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 29
+text = "Create New"
+
+[node name="background" type="Polygon2D" parent="."]
+z_index = -3
+position = Vector2(-25, -12)
+scale = Vector2(1, 1.01862)
+polygon = PackedVector2Array(-82, -44, 1238, -22, 1210, 708, -85, 702)
+
+[node name="view" type="Button" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 365.0
+offset_right = 770.0
+offset_bottom = 446.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 29
+text = "View Posts"
+
+[node name="Homepage" type="Button" parent="."]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 519.0
+offset_right = 770.0
+offset_bottom = 600.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 29
+text = "Go Back to Homepage"
+
+[node name="TopBorder" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(576.178, 4.75777)
+scale = Vector2(-1153.35, 10.5155)
+mesh = SubResource("QuadMesh_menx7")
+
+[node name="LeftBorder" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(3.8125, 327)
+scale = Vector2(8.375, 642)
+mesh = SubResource("QuadMesh_6tkba")
+
+[node name="BottomBorder" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(577.375, 643)
+scale = Vector2(1149.25, 9.75006)
+mesh = SubResource("QuadMesh_dyuq5")
+
+[node name="RightBorder" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1148.81, 325.236)
+scale = Vector2(-8.46823, 644.972)
+mesh = SubResource("QuadMesh_whmry")
+
+[connection signal="pressed" from="createNew" to="." method="_on_create_new_pressed"]
+[connection signal="pressed" from="view" to="." method="_on_view_pressed"]
+[connection signal="pressed" from="Homepage" to="." method="_on_homepage_pressed"]

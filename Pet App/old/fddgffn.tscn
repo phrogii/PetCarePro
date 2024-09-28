@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dxui7pb05qotk"]
+
+[node name="Explore" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-59, -131, 1274, -140, 1190, 841, -75, 804)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl6cqog75h15w"]
+
+[ext_resource type="Script" path="res://app/post.gd" id="1_opaki"]
+
+[node name="postedScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_opaki")
+
+[node name="background" type="Polygon2D" parent="."]
+position = Vector2(-26, -9)
+polygon = PackedVector2Array(-72, -50, 1316, -42, 1318, 759, -65, 737)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 135.0
+offset_right = 771.0
+offset_bottom = 231.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Created Post!"
+
+[node name="view" type="Button" parent="."]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 360.0
+offset_right = 716.0
+offset_bottom = 462.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "View Post"
+
+[node name="home" type="Button" parent="."]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 500.0
+offset_right = 715.0
+offset_bottom = 602.0
+theme_override_colors/font_color = Color(0.00462247, 0.00462247, 0.00462247, 1)
+theme_override_font_sizes/font_size = 40
+text = "Homepage"
+
+[connection signal="pressed" from="view" to="." method="_on_view_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

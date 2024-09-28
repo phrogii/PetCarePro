@@ -1,0 +1,189 @@
+[gd_scene load_steps=12 format=3 uid="uid://8lq5e1ascypt"]
+
+[ext_resource type="Texture2D" uid="uid://vjxwf3lx7e2l" path="res://old/icon.svg" id="1_i6fia"]
+[ext_resource type="Script" path="res://app/homepage.gd" id="1_lv2mu"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_xsvnx"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_mnyn1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_4y53x"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_nwlig"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_j3n80"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_we407"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_a40t7"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_641dl"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tdqav"]
+
+[node name="Homepage" type="Node2D"]
+script = ExtResource("1_lv2mu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-7, -106, 1209, -122, 1200, 730, -26, 700)
+
+[node name="Explore" type="Button" parent="."]
+offset_left = 364.0
+offset_top = 180.0
+offset_right = 1040.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 100
+text = "Explore"
+
+[node name="News" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 368.0
+offset_right = 258.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 45
+text = "Tips"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1105, 602)
+scale = Vector2(0.382812, 0.359375)
+texture = ExtResource("1_i6fia")
+
+[node name="Mesh" type="Node" parent="."]
+
+[node name="TopMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(578.041, 6.53078)
+scale = Vector2(-1155.08, 14.0616)
+mesh = SubResource("QuadMesh_xsvnx")
+
+[node name="LeftMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(7.75, 322.25)
+scale = Vector2(-14.5, 645.5)
+mesh = SubResource("QuadMesh_mnyn1")
+
+[node name="BottomMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(576.5, 640.875)
+scale = Vector2(1153, 13.75)
+mesh = SubResource("QuadMesh_4y53x")
+
+[node name="RightMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1147.5, 323.5)
+scale = Vector2(11, 621)
+mesh = SubResource("QuadMesh_nwlig")
+
+[node name="TitleDivider" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(576.375, 122.875)
+scale = Vector2(1131.25, 12.25)
+mesh = SubResource("QuadMesh_j3n80")
+
+[node name="BottomDivider" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(575.062, 482.438)
+scale = Vector2(1133.87, 15.125)
+mesh = SubResource("QuadMesh_we407")
+
+[node name="LeftDivider" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(285, 381.5)
+scale = Vector2(12, 505)
+mesh = SubResource("QuadMesh_a40t7")
+
+[node name="LeftTitleDivider" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(146, 235.984)
+scale = Vector2(276, 14.0313)
+mesh = SubResource("QuadMesh_641dl")
+
+[node name="BottomInfoDividier" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(719, 561)
+scale = Vector2(12.75, 165.75)
+mesh = SubResource("QuadMesh_tdqav")
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="Mesh"]
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Title" type="Label" parent="Labels"]
+offset_left = 157.0
+offset_top = 13.0
+offset_right = 953.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "Welcome to Pet Guide"
+
+[node name="Menu" type="Label" parent="Labels"]
+offset_left = 78.0
+offset_top = 146.0
+offset_right = 210.0
+offset_bottom = 209.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Menu"
+
+[node name="AboutUs" type="Label" parent="Labels"]
+offset_left = 78.0
+offset_top = 490.0
+offset_right = 190.0
+offset_bottom = 525.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "About Us"
+
+[node name="AI" type="Label" parent="Labels"]
+offset_left = 433.0
+offset_top = 490.0
+offset_right = 556.0
+offset_bottom = 539.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Uses AI"
+
+[node name="Godot" type="Label" parent="Labels"]
+offset_left = 835.0
+offset_top = 490.0
+offset_right = 1027.0
+offset_bottom = 539.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Uses Godot"
+
+[node name="AIText" type="Label" parent="Labels"]
+offset_left = 336.0
+offset_top = 539.0
+offset_right = 672.0
+offset_bottom = 629.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Uses Chatgpt to help with info
+If your pet is sick, contact a vet
+Chatgpt may not be 100% accurate"
+
+[node name="GodotText" type="Label" parent="Labels"]
+offset_left = 807.0
+offset_top = 559.0
+offset_right = 1043.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Uses Godot as its engine"
+
+[node name="Started" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 260.0
+offset_right = 258.0
+offset_bottom = 344.0
+theme_override_font_sizes/font_size = 45
+text = "In Depth"
+
+[connection signal="pressed" from="Explore" to="." method="_on_explore_pressed"]
+[connection signal="pressed" from="News" to="." method="_on_news_pressed"]
+[connection signal="pressed" from="Started" to="." method="_on_started_pressed"]

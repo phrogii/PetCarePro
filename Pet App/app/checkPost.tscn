@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://ynt6hsyixgtc"]
+
+[ext_resource type="Script" path="res://app/check.gd" id="1_3q4g3"]
+
+[node name="CheckPost" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3q4g3")
+
+[node name="background" type="Polygon2D" parent="."]
+scale = Vector2(364.7, -46.4414)
+polygon = PackedVector2Array(-0.65259, 4.67255, 3.47957, 4.17731, 3.5728, -14.8144, 0.0493556, -16.0417, -0.515492, -13.1779)
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 36.0
+offset_right = 1123.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "The quick brown fox jumped over the lazy dog."
+
+[node name="body" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 117.0
+offset_right = 1123.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "The quick brown fox jumped over the lazy dog."
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 584.0
+offset_right = 753.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Go To Homepage"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://djk347gnjgd12"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fqsv1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_jtdfq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_s8v5d"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_bgjfi"]
+
+[node name="post" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-93, -80, 1204, -100, 1255, 694, -36, 741)
+
+[node name="Borders" type="Node" parent="."]
+
+[node name="Top" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(575.75, 3.75)
+scale = Vector2(1152.5, 8.5)
+mesh = SubResource("QuadMesh_fqsv1")
+
+[node name="Left" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(3.75002, 323.75)
+scale = Vector2(8.49997, 648.5)
+mesh = SubResource("QuadMesh_jtdfq")
+
+[node name="Bottom" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(579.25, 643.938)
+scale = Vector2(1145.5, 7.87502)
+mesh = SubResource("QuadMesh_s8v5d")
+
+[node name="Right" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1152.37, 319.125)
+scale = Vector2(6.74984, 657.75)
+mesh = SubResource("QuadMesh_bgjfi")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 1122.0
+offset_bottom = 98.0
+text = "Sample"
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GoBack" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="ReplyBox" type="LineEdit" parent="."]
+layout_mode = 0
+offset_right = 67.0625
+offset_bottom = 31.0
+
+[node name="Submit" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

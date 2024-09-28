@@ -1,0 +1,174 @@
+[gd_scene load_steps=12 format=3 uid="uid://da0hik3npdav5"]
+
+[ext_resource type="Script" path="res://app/create.gd" id="1_gj37w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wng7m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_676k7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dre8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m0q52"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t1xf0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1d5g"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ty87j"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_71lxe"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_cmyaj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_45w0u"]
+
+[node name="createPost" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gj37w")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_top = 7.0
+offset_right = 1152.0
+offset_bottom = 49.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Create New Post"
+horizontal_alignment = 1
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 565.0
+offset_right = 703.0
+offset_bottom = 623.0
+scale = Vector2(0.994533, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Back"
+
+[node name="background" type="Polygon2D" parent="."]
+z_index = -4
+position = Vector2(-36, -37)
+polygon = PackedVector2Array(-56, -47, 299.431, -45.1237, 502.875, -44.0497, 1270, -40, 1300, 740, -93, 752)
+
+[node name="postTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 74.0
+offset_right = 166.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Post Title:"
+
+[node name="postTitleBox" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 69.0
+offset_right = 1092.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_uneditable_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.409743, 0.595687, 1, 1)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 1)
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wng7m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_676k7")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_1dre8")
+placeholder_text = "Type here..."
+clear_button_enabled = true
+
+[node name="titleBorder" type="Polygon2D" parent="."]
+position = Vector2(14.1792, 37.0159)
+scale = Vector2(1.00355, 0.603175)
+color = Color(0, 0, 0, 1)
+invert_enabled = true
+invert_border = 5.0
+polygon = PackedVector2Array(40, 66, 40, 88.6023, 40, 121, 438, 121, 1077, 121, 1077, 89.1599, 1077, 58, 559.463, 58, 40, 58)
+
+[node name="postBody" type="Label" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 170.0
+offset_right = 166.0
+offset_bottom = 202.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Post Body:"
+
+[node name="bodyBorder" type="Polygon2D" parent="."]
+position = Vector2(10.6528, -91.6191)
+scale = Vector2(1.00868, 4.47619)
+color = Color(0, 0, 0, 1)
+invert_enabled = true
+invert_border = 2.0
+polygon = PackedVector2Array(40, 66, 40, 88.6023, 40, 121, 438, 121, 1077, 121, 1077, 89.1599, 1077, 58, 559.463, 58, 40, 58)
+
+[node name="postBodyBox" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 167.0
+offset_right = 1068.0
+offset_bottom = 367.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0.407843, 0.596078, 1, 1)
+theme_override_colors/word_highlighted_color = Color(0.407843, 0.596078, 1, 1)
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m0q52")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t1xf0")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_d1d5g")
+placeholder_text = "Type here..."
+
+[node name="submit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 498.0
+offset_right = 702.0
+offset_bottom = 556.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Submit"
+
+[node name="Left" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(3.25, 323.75)
+scale = Vector2(7.5, 648.5)
+mesh = SubResource("QuadMesh_ty87j")
+
+[node name="Top" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(578.5, 2.875)
+scale = Vector2(1147, 8.25)
+mesh = SubResource("QuadMesh_71lxe")
+
+[node name="Bottom" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(579.375, 643.625)
+scale = Vector2(1145.25, 7.25)
+mesh = SubResource("QuadMesh_cmyaj")
+
+[node name="Right" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1150.62, 317.875)
+scale = Vector2(7.24991, 658.25)
+mesh = SubResource("QuadMesh_45w0u")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="submit" to="." method="_on_submit_pressed"]

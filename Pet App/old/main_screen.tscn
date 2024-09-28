@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://b65gr45rdypwy"]
+
+[ext_resource type="Script" path="res://old/aiManager.gd" id="2_xxjpv"]
+
+[sub_resource type="Theme" id="Theme_556ic"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(563, 279)
+
+[node name="aiManager" type="Node" parent="."]
+script = ExtResource("2_xxjpv")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+z_index = 17
+offset_left = -565.0
+offset_top = 100.0
+offset_right = 576.0
+offset_bottom = 746.0
+
+[node name="Window" type="Window" parent="CenterContainer"]
+title = "Forum"
+position = Vector2i(0, 36)
+size = Vector2i(1137, 612)
+theme = SubResource("Theme_556ic")
+theme_type_variation = &"1"
+
+[node name="title" type="Label" parent="CenterContainer/Window"]
+modulate = Color(0, 0, 0, 1)
+z_index = 1
+offset_left = 531.0
+offset_top = 10.0
+offset_right = 761.0
+offset_bottom = 33.0
+scale = Vector2(1.25, 1.25)
+text = "Forums"
+
+[node name="background" type="Polygon2D" parent="CenterContainer/Window"]
+z_index = -1
+position = Vector2(563, 279)
+polygon = PackedVector2Array(-567, -281, 573, -281, 574, 371, -565, 369)
+
+[node name="createNew" type="Button" parent="CenterContainer/Window"]
+offset_left = 410.0
+offset_top = 70.0
+offset_right = 710.0
+offset_bottom = 110.0
+text = "Create New Post"
+
+[node name="browseForums" type="Button" parent="CenterContainer/Window"]
+offset_left = 410.0
+offset_top = 200.0
+offset_right = 710.0
+offset_bottom = 240.0
+text = "Browse Other Posts"

@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://ch7d7n3o0wdpa"]
+
+[ext_resource type="Script" path="res://app/fox.gd" id="1_u2qqk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fqsv1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_jtdfq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_s8v5d"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_bgjfi"]
+
+[node name="foxpost" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u2qqk")
+
+[node name="Background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-93, -80, 1204, -100, 1255, 694, -36, 741)
+
+[node name="Borders" type="Node" parent="."]
+
+[node name="Top" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(575.75, 3.75)
+scale = Vector2(1152.5, 8.5)
+mesh = SubResource("QuadMesh_fqsv1")
+
+[node name="Left" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(3.75002, 323.75)
+scale = Vector2(8.49997, 648.5)
+mesh = SubResource("QuadMesh_jtdfq")
+
+[node name="Bottom" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(579.25, 643.938)
+scale = Vector2(1145.5, 7.87502)
+mesh = SubResource("QuadMesh_s8v5d")
+
+[node name="Right" type="MeshInstance2D" parent="Borders"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1152.37, 319.125)
+scale = Vector2(6.74984, 657.75)
+mesh = SubResource("QuadMesh_bgjfi")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 369.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Technically, could you keep a fox as a pet?"
+
+[node name="Body" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 1139.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "I just wanted to know if it was legal or not here in the US.
+Also do they carry and bad diseases aside from rabies? Are they
+ friendly with dogs?"
+
+[node name="GoBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 583.0
+offset_right = 102.0
+offset_bottom = 636.0
+text = "Go Back"
+
+[node name="ReplyBox" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 583.0
+offset_right = 928.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+placeholder_text = "Type here to reply"
+
+[node name="Submit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 937.0
+offset_top = 583.0
+offset_right = 1139.0
+offset_bottom = 636.0
+text = "Submit Reply"
+
+[node name="reply" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 299.0
+offset_right = 1109.0
+offset_bottom = 359.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+
+[connection signal="pressed" from="GoBack" to="." method="_on_go_back_pressed"]
+[connection signal="pressed" from="Submit" to="." method="_on_submit_pressed"]

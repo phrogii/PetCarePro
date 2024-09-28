@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbv0q70c8e0xc"]
+
+[ext_resource type="Script" path="res://app/more.gd" id="1_8jahf"]
+
+[node name="more" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jahf")
+
+[node name="background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-85, -64, 1277, -68, 1277, 759, -87, 752)
+
+[node name="title" type="Label" parent="."]
+layout_mode = 2
+offset_left = 429.0
+offset_right = 732.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "More Posts"
+horizontal_alignment = 1
+
+[node name="sampleButton1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 69.0
+offset_right = 1129.0
+offset_bottom = 143.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "My Dog is't feeling very well. Hes eating grass which I don't think is a good sign. What should I do?"
+
+[node name="sampleButton2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 156.0
+offset_right = 1129.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Can you keep a lobster as a pet in Wisconsin? I want to know if that is legal as I want one from out of the country."
+
+[node name="sampleButton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 248.0
+offset_right = 1129.0
+offset_bottom = 326.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Does your cat also sleep all of the time? I wonder why my cat is so lazy. Maybe a behavior?"
+
+[node name="sampleButton4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 339.0
+offset_right = 1129.0
+offset_bottom = 413.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Technically, could you keep a fox as a pet?"
+
+[node name="sampleButton5" type="Button" parent="."]
+offset_left = 29.0
+offset_top = 431.0
+offset_right = 1129.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "test post 123"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 553.0
+offset_right = 798.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Back To Homepage"
+
+[connection signal="pressed" from="sampleButton4" to="." method="_on_sample_button_4_pressed"]
+[connection signal="pressed" from="sampleButton5" to="." method="_on_sample_button_5_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

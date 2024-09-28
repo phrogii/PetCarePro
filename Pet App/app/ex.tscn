@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0l3oqo34xpyw"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_xsvnx"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_mnyn1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_4y53x"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_nwlig"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_b0ynb"]
+
+[node name="Homepage" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="Background" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-7, -106, 1209, -122, 1200, 730, -26, 700)
+
+[node name="Mesh" type="Node" parent="."]
+
+[node name="TopMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(578.041, 6.53078)
+scale = Vector2(-1155.08, 14.0616)
+mesh = SubResource("QuadMesh_xsvnx")
+
+[node name="LeftMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(7.75, 322.25)
+scale = Vector2(-14.5, 645.5)
+mesh = SubResource("QuadMesh_mnyn1")
+
+[node name="BottomMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(576.5, 640.875)
+scale = Vector2(1153, 13.75)
+mesh = SubResource("QuadMesh_4y53x")
+
+[node name="RightMesh" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1147.5, 323.5)
+scale = Vector2(11, 621)
+mesh = SubResource("QuadMesh_nwlig")
+
+[node name="TitleDivider" type="MeshInstance2D" parent="Mesh"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(575.625, 130.5)
+scale = Vector2(1132.75, 15)
+mesh = SubResource("QuadMesh_b0ynb")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Mesh"]
+visible = false
+
+[node name="AI Thingy" type="Node" parent="."]
+
+[node name="AIPrompt" type="TextEdit" parent="AI Thingy"]
+offset_left = 212.0
+offset_top = 185.0
+offset_right = 965.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 40
+placeholder_text = "What do you want to ask?"
+
+[node name="AIans" type="TextEdit" parent="AI Thingy"]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Enter" type="Button" parent="."]
+offset_left = 374.0
+offset_top = 508.0
+offset_right = 761.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 60
+text = "Enter"
+
+[node name="Reload" type="Button" parent="."]
+offset_left = 993.0
+offset_top = 565.0
+offset_right = 1133.0
+offset_bottom = 628.0
+theme_override_font_sizes/font_size = 40
+text = "Reload"
+
+[node name="Title" type="Label" parent="."]
+offset_left = 330.0
+offset_top = 13.0
+offset_right = 791.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "Get Started!"
